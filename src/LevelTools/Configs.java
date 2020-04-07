@@ -34,7 +34,7 @@ public class Configs {
 		c.put("HelpFormat", "%prefix% %command% >> %help%");
 		
 		config.setHeader("+-------------------------------------------------------------------+ #\r\n" + 
-				"| Plugin was created by DevTec and Rajskooo   | #\r\n" + 
+				"| Plugin was created by DevTec and Rajskoo   | #\r\n" + 
 				"+-------------------------------------------------------------------+ #\r\n" + 
 				"Nìjakej text\n" +
 				"  nìco :D\n"+
