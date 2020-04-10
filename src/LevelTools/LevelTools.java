@@ -8,21 +8,21 @@ public class LevelTools implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
-		
 		if (args.length == 0) {
 			
 			return true;
 		}
 		
 		if (args.length == 1) {
-			
 			if (args[0].equalsIgnoreCase("info")) {
 				
 				return true;
 			}
 			
 			if (args[0].equalsIgnoreCase("reload")) {
-				
+				Loader.msg(Loader.s("LevelTools.Reloading").replace("%prefix%", Loader.s("Prefix")), s);
+				Configs.reload();
+				Loader.msg(Loader.s("LevelTools.Reloaded").replace("%prefix%", Loader.s("Prefix")), s);
 				return true;
 			}
 			return true;

@@ -18,6 +18,8 @@ public class Configs {
 		Map<String, Object> c = new HashMap<String, Object>();
 		c.put("Prefix", "&aLevel&fTools");
 		c.put("NotPermissionsMessage", "&4You do not have permissions");
+		c.put("LevelTools.Reloading", "%prefix% &f----------&a Reloading configs&f ----------");
+		c.put("LevelTools.Reloaded", "%prefix% &aConfigs reloaded successfully...");
 		
 		
 		Translation.addDefaults(c);
