@@ -24,7 +24,7 @@ public class Loader extends JavaPlugin {
 		
         instance = this;
         
-       //Bukkit.getPluginCommand("Discord").setExecutor(new Commands.Discord());
+       Bukkit.getPluginCommand("leveltools").setExecutor(new LevelTools());
        //Bukkit.getPluginManager().registerEvents(new Events.onCommand(), this);
         
         
