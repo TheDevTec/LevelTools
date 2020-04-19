@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import Utils.Events;
 import me.Straiker123.TheAPI;
 
 public class Loader extends JavaPlugin {
@@ -25,6 +26,7 @@ public class Loader extends JavaPlugin {
         instance = this;
         
        Bukkit.getPluginCommand("leveltools").setExecutor(new LevelTools());
+       Bukkit.getPluginManager().registerEvents(new Events(), this);
        //Bukkit.getPluginManager().registerEvents(new Events.onCommand(), this);
         
         
