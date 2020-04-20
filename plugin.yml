@@ -1,0 +1,12 @@
+name: LevelTools
+main: LevelTools.Loader
+version: 0.1
+description: Plugin for tools leveling
+author: DevTec, Rajskooo
+depend: [TheAPI]
+api-version: 1.13
+commands:
+    LevelTools:
+        description: Main command
+        usage: /<command> 
+        aliases: [lt, ltools, levelt]
