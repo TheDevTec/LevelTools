@@ -41,6 +41,18 @@ public class Configs {
 				"&7-------------------------------------------"));
 		c.put("Options.LevelReach.SoundEnabled", true);
 		c.put("Options.LevelReach.Sound", "ENTITY_PLAYER_LEVELUP");
+		c.put("Options.PerToolXP.Enabled", true);
+		
+		c.put("PerToolXP.Tools.WOODEN_PICKAXE.BlockList", Arrays.asList(
+				"STONE:1","IRON_ORE:1","DIAMOND_ORE:4","GOLD_ORE:2","COAL_ORE:1","LAPIS_ORE:1","REDSTONE_ORE:1","EMERALD_ORE:5","NETHER_QUARTZ_ORE:2"));
+		c.put("PerToolXP.Tools.STONE_PICKAXE.BlockList", Arrays.asList(
+				"STONE:1","IRON_ORE:1","DIAMOND_ORE:4","GOLD_ORE:2","COAL_ORE:1","LAPIS_ORE:1","REDSTONE_ORE:1","EMERALD_ORE:5","NETHER_QUARTZ_ORE:2"));
+		c.put("PerToolXP.Tools.IRON_PICKAXE.BlockList", Arrays.asList(
+				"STONE:1","IRON_ORE:1","DIAMOND_ORE:4","GOLD_ORE:2","COAL_ORE:1","LAPIS_ORE:1","REDSTONE_ORE:1","EMERALD_ORE:5","NETHER_QUARTZ_ORE:2"));
+		c.put("PerToolXP.Tools.GOLDEN_PICKAXE.BlockList", Arrays.asList(
+				"STONE:1","IRON_ORE:1","DIAMOND_ORE:4","GOLD_ORE:2","COAL_ORE:1","LAPIS_ORE:1","REDSTONE_ORE:1","EMERALD_ORE:5","NETHER_QUARTZ_ORE:2"));
+		c.put("PerToolXP.Tools.DIAMOND_PICKAXE.BlockList", Arrays.asList(
+				"STONE:1","IRON_ORE:1","DIAMOND_ORE:4","GOLD_ORE:2","COAL_ORE:1","LAPIS_ORE:1","REDSTONE_ORE:1","EMERALD_ORE:5","NETHER_QUARTZ_ORE:2"));
 		
 		config.setHeader("+-------------------------------------------------------------------+ #\r\n" + 
 				"| Plugin was created by DevTec and Rajskoo   | #\r\n" + 
@@ -61,6 +73,8 @@ public class Configs {
 	public static void reload() {
 		config.reload();
 		Translation.reload();
+		Loader.config=config.getConfig();
+		Loader.Translation=Translation.getConfig();
 	}
 
 	

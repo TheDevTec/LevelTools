@@ -3,7 +3,6 @@ package Utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -72,7 +71,6 @@ public class LevelingUtil {
 					 loree.add(TheAPI.colorize("&aTool XP &f"+getToolXP(p)));
 					 m.setLore(loree);
 					 item.setItemMeta(m);
-					 Bukkit.broadcastMessage("Funguje :D");
 					 return;
 				 }
 				 if(m.getLore()!=null) {
@@ -89,10 +87,8 @@ public class LevelingUtil {
 							}
 							line=line+1;
 						}
-				//lore.remove(levelLine);
-				//lore.remove(xpLine);
 				}
-				Bukkit.broadcastMessage("Level to set: "+level);
+				//Bukkit.broadcastMessage("Level to set: "+level);
 				
 				lore.add(TheAPI.colorize("&aItem level &f"+level));
 				lore.add(TheAPI.colorize("&aTool XP &f"+xp));
@@ -134,11 +130,9 @@ public class LevelingUtil {
 	 }
 	 public static void addXp(Player p, int xpammount) {
 		 int level = getToolLevel(p);
-		 Bukkit.broadcastMessage("Level "+level);
 		 int xp = getToolXP(p);
 		 int neededxp = 0;
 		 if(level==0) {
-			 Bukkit.broadcastMessage(1+"");
 			 setlevel(p, 1);
 			 annoucment(p, 1);
 			 return;
@@ -150,17 +144,16 @@ public class LevelingUtil {
 		 if(level>300&&level<=400) neededxp = 35*level;
 		 if(level>400&&level<=500) neededxp = 45*level;
 		 if(level>500) neededxp = 55*level;
-		 Bukkit.broadcastMessage("XP: "+xp);
-		 Bukkit.broadcastMessage("NeededXP: "+neededxp);
+		 //Bukkit.broadcastMessage("XP: "+xp+ "NeededXP: "+neededxp);
 		 xp = xp+xpammount;
-		 Bukkit.broadcastMessage("NevXP: "+xp);
+		 //Bukkit.broadcastMessage("NevXP: "+xp);
 			 if(xp<neededxp) {
-				 Bukkit.broadcastMessage("Pøidávám XP "+xpammount);
+				 //Bukkit.broadcastMessage("Pøidávám XP "+xpammount);
 				 setXP(p, xp);
 				 return;
 			 }
 			 if(xp>=neededxp) {
-				 Bukkit.broadcastMessage("Pøidávám LEVEL ");
+				 //Bukkit.broadcastMessage("Pøidávám LEVEL ");
 				 level = level+1;
 				 setlevel(p, level);
 				 annoucment(p, level);
@@ -176,9 +169,7 @@ public class LevelingUtil {
 		 }
 		 if(Loader.config.getBoolean("Options.LevelReach.SoundEnabled")==true) {
 			 String sound = Loader.config.getString("Options.LevelReach.Sound").toUpperCase();
-			 Bukkit.broadcastMessage(sound);
 			 p.playSound(p.getLocation(), Sound.valueOf(sound), 5, 1);
-		 
 		 }
 	 }
 }

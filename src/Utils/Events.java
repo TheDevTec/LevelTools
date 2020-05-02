@@ -18,21 +18,16 @@ public class Events implements Listener {
 		
 		if(item == Material.WOODEN_SHOVEL||item == Material.STONE_SHOVEL||item == Material.IRON_SHOVEL||item == Material.GOLDEN_SHOVEL||
 				item == Material.DIAMOND_SHOVEL) {
-			//if (material.equals(block.getType())) {
-				Utils.LevelingUtil.getToolXP(p);
-			//}
+				ToolUtil.getToolXP(p, item, material);
 		}
 		if (item == Material.WOODEN_PICKAXE||item == Material.STONE_PICKAXE||item == Material.IRON_PICKAXE||item == Material.GOLDEN_PICKAXE||
 				item== Material.DIAMOND_PICKAXE) {
-			if (material.equals(block.getType())) {
-				LevelingUtil.addXp(p, 1);
-			}
+				//LevelingUtil.addXp(p, 1);
+				ToolUtil.getToolXP(p, item, material);
 		}
 		if (item == Material.WOODEN_AXE||item == Material.STONE_AXE||item == Material.IRON_AXE||item== Material.GOLDEN_AXE||
 				item == Material.DIAMOND_AXE) {
-			if (material.equals(block.getType())) {
-				Utils.LevelingUtil.getToolXP(p);
-			}
+				ToolUtil.getToolXP(p, item, material);
 		}
 	}
 }
